@@ -1,10 +1,14 @@
 package base;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -58,15 +62,15 @@ public class BasePage {
         return url;
     }
 
-//	public void takeSnapShot(WebDriver webdriver) throws IOException {
-//		File srcFile = ((TakesScreenshot) webdriver).getScreenshotAs(OutputType.FILE);
-//
-//		File destFile = new File("C:\\Users\\sbrun\\OneDrive - Learn Automation\\Desktop\\Resources\\screenshots\\"
-//				+ timestamp() + ".png");
-//
-//		FileUtils.copyFile(srcFile, destFile);
-//
-//	}
+	public void takeSnapShot(String name) throws IOException {
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		File destFile = new File(System.getProperty("user.dir")+"\\target\\screenshots\\"
+				+ timestamp() + ".png");
+
+		FileUtils.copyFile(srcFile, destFile);
+
+	}
 
     public String timestamp() {
         return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date());

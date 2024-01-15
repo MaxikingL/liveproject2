@@ -5,11 +5,13 @@ import java.io.IOException;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import base.BasePage;
 import pages.*;
 
+@Listeners(resource.Listeners.class)
 public class OrderCompleteTest extends BasePage {
 
 
@@ -100,14 +102,16 @@ public class OrderCompleteTest extends BasePage {
 		OrderFormPayment orderFormPayment = new OrderFormPayment(driver);
 		orderFormPayment.getPayByCheckRadioBtn().click();
 		orderFormPayment.getTermsConditionsCheckbox().click();
+		orderFormPayment.getOrderBtn().click();
 
 
 
 
 
 
-		
-		
+
+
+
 	}
 
 }

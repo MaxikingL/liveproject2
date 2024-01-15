@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/malema/workSpace/Selenium/liveproject1/src/test/java/uk/co/automationtesting/AddRemoveItemBasketTest.java">
+        <classes>
+            <class name="uk.co.automationtesting.AddRemoveItemBasketTest">
+                <methods>
+                    <include name="addRemoveItem"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/malema/workSpace/Selenium/liveproject1/src/test/java/uk/co/automationtesting/OrderCompleteTest.java">
+        <classes>
+            <class name="uk.co.automationtesting.OrderCompleteTest">
+                <methods>
+                    <include name="endToEndTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

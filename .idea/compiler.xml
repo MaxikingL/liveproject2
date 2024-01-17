@@ -7,8 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="liveproject1" />
+        <module name="liveproject2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="liveproject2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

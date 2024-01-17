@@ -1,5 +1,4 @@
 package uk.co.automationtesting;
-
 import base.ExtentManager;
 import base.Hooks;
 import org.openqa.selenium.support.ui.Select;
@@ -16,6 +15,8 @@ public class AddRemoveItemBasketTest extends Hooks {
     public AddRemoveItemBasketTest() throws IOException {
         super();
     }
+
+
 
 
     @Test
@@ -53,15 +54,15 @@ public class AddRemoveItemBasketTest extends Hooks {
         ShoppingCart cart = new ShoppingCart();
         cart.getDeleteItemTwo().click();
 
-        waitForElementInvisible(cart.getDeleteItemTwo(), 10);
+        waitForElementInvisible(cart.getDeleteItemTwo(),10);
 
         System.out.println(cart.getTotalAmount().getText());
 
-        try {
-            Assert.assertEquals(cart.getTotalAmount().getText(), "$45.24");
-            ExtentManager.pass("The total amount matches the expected amount");
-        } catch (AssertionError e) {
-            Assert.fail("Cart did not match the expected amount, it found" + cart.getTotalAmount().getText() +
+        try{
+            Assert.assertEquals(cart.getTotalAmount().getText(),"$45.24");
+ExtentManager.pass("The total amount matches the expected amount");
+        }catch (AssertionError e){
+            Assert.fail("Cart did not match the expected amount, it found"+ cart.getTotalAmount().getText()+
                     "exoected 45,23");
             ExtentManager.fail("The total amount did not expected amount");
         }

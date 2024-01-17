@@ -21,7 +21,7 @@ public class ExtentManager extends BasePage {
 
     public static ExtentReports getReport() {
         if (extentReport == null) {
-            setupExtentReport("Live Project 2");
+            setupExtentReport("Live Project 1");
         }
         return extentReport;
     }
